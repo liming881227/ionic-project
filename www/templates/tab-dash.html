@@ -1,0 +1,88 @@
+<!--<ion-view class="index-dash" hide-nav-bar="true">-->
+    <!--<ion-nav-bar class="bar-stable">-->
+    <!--</ion-nav-bar>-->
+    <!--<ion-tabs delegate-handle="video-type-tabs" class="tabs-top tabs-icon-only">-->
+        <!--<ion-tab title="{{type.typeName}}" ng-repeat="type in types"-->
+                 <!--on-select="getTypeVideos(type)"-->
+                <!-->-->
+        <!--</ion-tab>-->
+    <!--</ion-tabs>-->
+    <!--<ion-content locking="false" padding="true">-->
+        <!--<ion-refresher pulling-text="松开即可刷新" on-refresh="refreshVideos()">-->
+        <!--</ion-refresher>-->
+        <!--<div class="item-remove-animate" ng-repeat="video in videos" type="item-text-wrap" data-tap-disable="true">-->
+            <!--<h4 style="padding-bottom: 10px; ">{{video.name}}</h4>-->
+            <!--<video width="100%" class="video-js vjs-default-skin"-->
+                   <!--video-poster="video.downloadUrl" preload="none" ng-attr-src="{{video.downLoadUrl | trustUrl}}"-->
+                   <!--data-setup='{ "inactivityTimeout": 0 }'-->
+                   <!--ng-attr-poster="{{video.thumbnailUrl}}" webkit-playsinline controls>-->
+
+                <!--<track kind="captions" src="captions.vtt" srclang="en" label="English" />-->
+            <!--</video>-->
+
+            <!--<div class="video-more">-->
+                <!--<div class="float-left create-user">-->
+                    <!--<img class="user-img" ng-src="{{'img/adam.jpg'}}">-->
+                    <!--<span class="user-name">手机用户{{$index + 2}}</span>-->
+                <!--</div>-->
+                <!--<div class="float-right cursor-pointer" ng-click="shareVideo(video);">-->
+                    <!--<span class="watch-no">{{video.watchNumber + '次观看'}}</span>-->
+                        <!--<span class="share">-->
+                             <!--<i class="ion-android-share-alt"></i>-->
+                            <!--分享-->
+                        <!--</span>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--<ion-infinite-scroll on-infinite="loadMoreVideos()" distance="10%" ion-refresher ng-if="hasNextPage && !loadError">-->
+        <!--</ion-infinite-scroll>-->
+        <!--<div style="padding-bottom: 10px;" ng-if="!hasNextPage" class="tips">没有更多了...</div>-->
+    <!--</ion-content>-->
+<!--</ion-view>-->
+
+
+<ion-view class="index-dash" hide-nav-bar="true">
+    <ion-nav-bar class="bar-stable">
+    </ion-nav-bar>
+    <ion-tabs delegate-handle="video-type-tabs" class="tabs-top tabs-icon-only">
+        <ion-tab title="{{type.typeName}}" ng-repeat="type in types"
+                 on-select="getTypeVideos(type)"
+                >
+        </ion-tab>
+    </ion-tabs>
+    <div class="scroll-div" style="height: 100%;overflow: scroll; padding: 50px 10px;">
+        <div infinite-scroll="loadMoreVideos()" infinite-scroll-distance="3" infinite-scroll-container='.scroll-div'>
+            <div class="item-remove-animate" ng-repeat="video in videos" type="item-text-wrap" data-tap-disable="true">
+                <h4 style="padding-bottom: 10px; ">{{video.name}}</h4>
+                <video width="100%" class="video-js vjs-default-skin"
+                       video-poster="video.downloadUrl" preload="none" ng-attr-src="{{video.downLoadUrl | trustUrl}}"
+                       data-setup='{ "inactivityTimeout": 0 }'
+                       ng-attr-poster="{{video.thumbnailUrl}}" webkit-playsinline controls>
+
+                    <track kind="captions" src="captions.vtt" srclang="en" label="English" />
+                </video>
+
+                <div class="video-more">
+                    <div class="float-left create-user">
+                        <img class="user-img" ng-src="{{'img/adam.jpg'}}">
+                        <span class="user-name">手机用户{{$index + 2}}</span>
+                    </div>
+                    <div class="float-right cursor-pointer" ng-click="shareVideo(video);">
+                        <span class="watch-no">{{video.watchNumber + '次观看'}}</span>
+                        <span class="share">
+                             <i class="ion-android-share-alt"></i>
+                            分享
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="padding-bottom: 10px;" ng-if="!hasNextPage" class="tips">没有更多了...</div>
+        </div>
+
+        <!--<ion-infinite-scroll on-infinite="loadMoreVideos()" distance="10%" ion-refresher ng-if="hasNextPage && !loadError">-->
+        <!--</ion-infinite-scroll>-->
+
+    </div>
+</ion-view>

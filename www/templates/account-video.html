@@ -1,0 +1,29 @@
+<div class="modal">
+    <!--<ion-refresher pulling-text="松开即可刷新" on-refresh="refreshVideos()">-->
+    <!--</ion-refresher>-->
+    <ion-header-bar>
+        <button class="button button-clear pull-right ion-ios-close-outline" ng-click="quitQueryVideo()"></button>
+        <h1 class="title">我{{curType}}的视频</h1>
+    </ion-header-bar>
+    <ion-content class="has-header user">
+        <!--<ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()" refreshing-icon="ion-loading-c">-->
+        <!--</ion-refresher>-->
+        <ion-list>
+            <ion-item class="item list-task" bindonce="item" ng-repeat=" video in accountVideos" >
+                <div class="float-left">
+                    <img class="thumb" ng-src="{{video.thumbnailUrl}}">
+                </div>
+                <div class="float-left" style="padding: 5px 0px; width: calc(100% - 80px);">
+                    <p style="font-size: 18px;">{{video.description}}</p>
+                    <div class="status">
+                        <span class="color-orange" ng-class="{'color-green' : video.status ==1 }" ng-bind="video.status | statusFilter"></span>
+                        <span ng-if="video.status == 1 || curType == '分享'">
+                            <span class="float-right color-orange">收益：{{video.awardMoney}}</span>
+                            <span class="float-right" style="margin-right: 20px;">观看：{{video.watchNumber + '次'}}</span>
+                        </span>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</div>

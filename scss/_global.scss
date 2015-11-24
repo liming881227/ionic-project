@@ -1,0 +1,44 @@
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.active-color {
+	color: $main-active-color;
+}
+
+.hh-btn {
+	border: 1px solid #FF8A00;
+	background: #FF8A00;
+	color: #fff;
+	padding: 0px 3px;
+	font-size: 13px;
+	border-radius: 5px;
+}
+
+.half-modal {
+	top: 35%;
+}
+
+.color-red {
+  color: $pptest-red;
+}
+
+.color-orange {
+  color: $pptest-orange;
+}
+
+.color-green {
+  color: $pptest-green;
+}
+
+.color-blue {
+  color: $pptest-blue;
+}

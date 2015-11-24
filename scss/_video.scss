@@ -1,0 +1,125 @@
+//videogular div.my-logo-layer {
+//	position: absolute;
+//	display: block;
+//	z-index: 50;
+//	top: 0;
+//}
+//
+//videogular div.my-logo-layer img {
+//	width: 150px;
+//	height: auto;
+//	padding-left: 20px;
+//	padding-top: 20px;
+//	opacity: 0.5;
+//}
+//
+//.videogular-container {
+//	width: 100%;
+//	height: 320px;
+//	margin: auto;
+//	overflow: hidden;
+//}
+//
+//.videogular-container .skipButton {
+//	position: absolute;
+//	padding: 10px;
+//	top: 10px;
+//	right: 10px;
+//	z-index: 99999;
+//	color: white;
+//	cursor: pointer;
+//	background-color: #666666;
+//	border: 2px #FFFFFF solid;
+//	display: none;
+//	-webkit-border-radius: 10px;
+//	-moz-border-radius: 10px;
+//	-ms-border-radius: 10px;
+//	border-radius: 10px;
+//}
+//
+//@media (min-width: 1200px) {
+//	.videogular-container {
+//		width: 1170px;
+//		height: 658.125px;
+//	}
+//
+//	.videogular-container.audio {
+//		width: 1170px;
+//		height: 50px;
+//	}
+//}
+//
+//@media (min-width: 992px) and (max-width: 1199px) {
+//	.videogular-container {
+//		width: 940px;
+//		height: 528.75px;
+//	}
+//
+//	.videogular-container.audio {
+//		width: 940px;
+//		height: 50px;
+//	}
+//}
+//
+//@media (min-width: 768px) and (max-width: 991px) {
+//	.videogular-container {
+//		width: 728px;
+//		height: 409.5px;
+//	}
+//
+//	.videogular-container.audio {
+//		width: 728px;
+//		height: 50px;
+//	}
+//}
+
+
+.vjs-fade-in,.vjs-fade-out {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transition-duration: 0s!important;
+}
+
+.vjs-fade-out {
+  /*visibility: hidden!important;
+  opacity: 0!important;*/
+  -webkit-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
+  -moz-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
+  -ms-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
+  -o-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
+  transition: visibility 0s linear 1.5s,opacity 1.5s linear
+}
+
+.vjs-default-skin .vjs-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  height: 2.6em;
+  color: #fff;
+  border-top: 1px solid #404040;
+  background: #242424;
+  background: -moz-linear-gradient(top,#242424 50%,#1f1f1f 50%,#171717 100%);
+  background: -webkit-gradient(linear,0% 0,0% 100%,color-stop(50%,#242424),color-stop(50%,#1f1f1f),color-stop(100%,#171717));
+  background: -webkit-linear-gradient(top,#242424 50%,#1f1f1f 50%,#171717 100%);
+  background: -o-linear-gradient(top,#242424 50%,#1f1f1f 50%,#171717 100%);
+  background: -ms-linear-gradient(top,#242424 50%,#1f1f1f 50%,#171717 100%);
+  background: linear-gradient(top,#242424 50%,#1f1f1f 50%,#171717 100%);
+  /*visibility: hidden;
+  opacity: 0*/
+}
+
+.vjs-default-skin.vjs-has-started .vjs-control-bar {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  bottom: -3.4em !important;
+  background-color: rgba(7, 20, 30, 1) !important;
+}
+
+
+.tips{
+  text-align: center;
+}

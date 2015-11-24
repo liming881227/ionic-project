@@ -1,0 +1,69 @@
+$gradient-top: #FF8A00;
+$gradient-bottom: #C3AC91;
+
+.account {
+  text-align: center;
+  background-color: #F3F3F3;
+  .user-info {
+    width: 100%;
+    height: 250px;
+    background: -webkit-linear-gradient(to bottom,$gradient-top,$gradient-bottom);
+    background: -o-linear-gradient(to bottom,$gradient-top,$gradient-bottom);
+    background: -moz-linear-gradient(to bottom,$gradient-top,$gradient-bottom);
+    background: linear-gradient(to bottom,$gradient-top,$gradient-bottom);
+    padding: 30px;
+
+    .img-out {
+      width: 105px;
+      height: 105px;
+      margin: 0 auto;
+      padding: 2px;
+      border-radius: 100%;
+      border: 1px solid #FFB100;
+      margin-bottom: 20px;
+      .img {
+        width: 100px;
+        border-radius: 100%;
+        text-align: center;
+        border: 3px solid #FDA741;
+      }
+    }
+
+
+    .name {
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .title {
+      font-size: 18px;
+      color: rgba(228, 225, 225, 0.71);
+    }
+  }
+
+  .block-list {
+    margin: 5px;
+    .item {
+      .icon-title {
+        margin-right: 14px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .user{
+    .vantage-info{
+      height: 300px;
+      background: inherit;
+      padding-top: 70px;
+      .vantage{
+        font-size: 24px;
+      }
+    }
+    .vantage-button{
+      min-height: 40px;
+      height: 40px;
+      line-height: 20px;
+    }
+  }
+}

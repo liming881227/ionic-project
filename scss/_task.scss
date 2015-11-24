@@ -1,0 +1,58 @@
+
+.list-task {
+  padding: 8px;
+  .thumb {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    vertical-align: -webkit-baseline-middle;
+  }
+
+  .status {
+    margin-top: 10px;
+    color: #A9A9A9;
+    font-size: 13px;
+  }
+}
+
+.task-detail{
+  .list{
+    .separator {
+      display: block;
+      min-height: 2px;
+      border: 1px solid $gray-light;
+      background-color: $gray-light;
+    }
+
+    .task-detail-time{
+      div{
+        width: 50%;
+      }
+
+    }
+
+    .task-detail-value{
+      div{
+        width: 50%;
+      }
+
+    }
+
+    .task-detail-content{
+      padding-top: 10px;
+    }
+
+    .task-detail-video-div{
+      padding-top: 20px;
+      .task-detail-video{
+          padding-bottom: 20px;
+      }
+
+      .video-infor-div{
+        width: 100%;
+        padding-top: 10px;
+      }
+
+    }
+  }
+}

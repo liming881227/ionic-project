@@ -1,0 +1,58 @@
+.bar.bar-stable {
+	background-color: $main-bg-color;
+}
+
+.bar.bar-stable .title {
+	color: #fff;
+}
+
+ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated {
+	color: #fff;
+}
+
+.tabs-top > .tabs, .tabs.tabs-top {
+	background-color: $main-bg-color;
+}
+
+.tabs {
+	background-color: $main-bg-color;
+}
+
+ion-tabs.tabs-color-active-positive .tab-item {
+	color: #000;
+}
+
+.button.button-positive {
+	border-color: $main-bg-color;
+	background-color: $main-bg-color;
+	color: #fff;
+}
+
+.item-complex.item-icon-right .item-content {
+	padding-right: 44px;
+}
+
+.bar {
+	background-color: $main-bg-color;
+}
+
+.bar .title {
+	color: #fff;
+}
+
+.bar .button.button-clear {
+	color: #fff;
+}
+
+.modal-backdrop, .modal-backdrop-bg {
+	background: rgba(82, 82, 82, 0.28);
+}
+
+ul {
+  list-style: none;
+}
+
+
+.scroll-content {
+  overflow: visible;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src &apos;self&apos; &apos;unsafe-inline&apos;; script-src &apos;self&apos; &apos;unsafe-inline&apos; &apos;unsafe-eval&apos;">
+    <title>&#x7B11;&#x770B;&#x628A;&#x94B1;&#x8D5A;</title>
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <link href="lib/myvideo/myvideo.css" rel="stylesheet" type="text/css">
+    <script src="lib/myVideo/myvideo.js"></script>
+
+    <!--<link href="lib/video.js/dist/video-js.css" rel="stylesheet" type="text/css">-->
+    <!--<script src="lib/video.js/dist/video.min.js"></script>-->
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+
+    <script src="js/controllers/dashController.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="js/controllers/accountController.js"></script>
+    <script src="js/controllers/taskDetailController.js"></script>
+    <script src="js/controllers/tasksController.js"></script>
+    <script src="js/controllers/shareController.js"></script>
+    <script src="js/controllers/shareVideoController.js"></script>
+    <script src="js/services/queryService.js"></script>
+    <script src="js/services/modalService.js"></script>
+    <script src="js/services/shareService.js"></script>
+    <script src="ui/video/videoSrc.js"></script>
+    <script src="js/filters/filter.js"></script>
+    <script src="js/directives/directives.js"></script>
+    <script src="js/directives/infiniteScroll.js"></script>
+    <script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="lib/videogular/videogular.js"></script>
+    <script src="lib/videogular-controls/vg-controls.js"></script>
+    <script src="lib/videogular-overlay-play/vg-overlay-play.js"></script>
+    <script src="lib/videogular-poster/vg-poster.js"></script>
+    <script src="lib/videogular-buffering/vg-buffering.js"></script>
+    <script src="js/services/utilService.js"></script>
+  </head>
+  <body ng-app="havefun">
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+    <!--<ion-nav-bar class="bar-stable">-->
+    <!--<ion-nav-back-button>-->
+    <!--</ion-nav-back-button>-->
+    <!--</ion-nav-bar>-->
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>

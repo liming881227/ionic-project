@@ -1,0 +1,14 @@
+<div class="modal half-modal">
+    <ion-header-bar>
+        <button class="button button-clear pull-right ion-ios-close-outline" ng-click="closeModal()"></button>
+        <h1 class="title">分享到</h1>
+    </ion-header-bar>
+    <ion-content class="has-header user">
+        <div class="share-item" collection-repeat="item in allShareItems" ng-click="shareVideo(item);">
+            <div>
+                <img class="type-img" ng-src="{{'img/share-all/' + item.type + '.png'}}">
+                <p style="text-align: center" ng-bind="item.name"></p>
+            </div>
+        </div>
+    </ion-content>
+</div>

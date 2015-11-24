@@ -1,0 +1,42 @@
+<ion-view title="任务中心" class="tasks">
+    <ion-nav-bar class="bar-stable">
+    </ion-nav-bar>
+    <ion-content>
+        <ion-list>
+            <!--<li class="item-remove-animate item-icon-right task-li" collection-repeat="task in tasks" type="item-text-wrap" href="#/tab/task/{{task.taskID}}">-->
+                <!--<div class="float-left user">-->
+                    <!--<img class="user-img" ng-src="{{'img/perry.png'}}">-->
+                <!--</div>-->
+                <!--<div class="float-left description">-->
+                    <!--<div ng-bind-html="task.description"></div>-->
+                    <!--<div>-->
+                        <!--<div class="float-left">-->
+                            <!--<span class="active-color" ng-bind="task.sharedMoney"></span>元/次-->
+                        <!--</div>-->
+                        <!--<div class="float-right">-->
+                            <!--预算<span class="active-color" ng-bind="task.moneyAll"></span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<i class="icon ion-chevron-right icon-accessory"></i>-->
+                <!--</div>-->
+            <!--</li>-->
+            <ion-item class="item-remove-animate item-icon-right task-li" collection-repeat="task in tasks" type="item-text-wrap" href="#/tab/task/{{task.taskID}}">
+                <div class="float-left user">
+                    <img class="user-img" ng-src="{{'img/perry.png'}}">
+                </div>
+                <div class="float-left description">
+                    <div class="title" ng-bind-html="task.description"></div>
+                    <div>
+                        <div class="float-left">
+                            <span class="active-color" ng-bind="task.sharedMoney"></span>元/次
+                        </div>
+                        <div class="float-right">
+                            预算<span class="active-color" ng-bind="task.moneyAll"></span>
+                        </div>
+                    </div>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

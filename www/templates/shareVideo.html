@@ -1,0 +1,17 @@
+<div class="share-video">
+    <p class="title" ng-bind="video.name"></p>
+    <video width="100%" class="video-js vjs-default-skin" height="264" video-poster="video.downloadUrl" preload="none" ng-attr-src="{{video.downLoadUrl | trustUrl}}" ng-attr-poster="{{video.thumbnailUrl}}"  webkit-playsinline  controls>
+    </video>
+
+    <div class="share">
+        <p>您的朋友<span class="color-orange" style="color:orange">小W</span>因为转发视频</p>
+        <p>分成<span class="color-orange" style="color:orange">23元</span></p>
+        <br>
+        <button class="button button-balanced">
+            帮TA转发
+        </button>
+        <button class="button button-energized">
+            我也要赚钱
+        </button>
+    </div>
+</div>

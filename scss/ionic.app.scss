@@ -1,0 +1,125 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+//引入自定义字体
+$eeicons-font-path: "../fonts" !default;
+@import "www/fonts/iconfont.scss";
+
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+@import "_variable";
+@import "_video";
+@import "_global";
+@import "_account";
+@import "_reset";
+@import "_task";
+@import "_share";
+@import "_androidConfig";
+@import "_share-video";
+
+.index-dash {
+  .tab-nav {
+    top: 0px;
+  }
+  .scroll-content {
+    top: 49px;
+  }
+}
+
+.video-js {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 250px;
+  margin: 0px auto;
+}
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+.video-more {
+  overflow: hidden;
+  font-size: 14px;
+  padding: 10px 0px;
+  border-bottom: 1px dashed #E0E0E0;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  .create-user {
+    .user-img {
+      width: 20px;
+      border-radius: 20px;
+      margin-top: -1px;
+      vertical-align: sub;
+      float: left;
+    }
+
+    .user-name {
+      margin-left: 5px;
+      color: #666;
+    }
+  }
+  .share {
+    border-left: 1px solid #aaa;
+    padding-left: 15px;
+    margin-left: 15px;
+    color: $main-active-color;
+  }
+}
+
+
+.tasks {
+  .task-li {
+    height: 70px !important;
+//    border-bottom: 1px solid #E0E0E0;
+
+    .item-content {
+      padding: 8px 49px 8px 8px;
+    }
+
+    .user {
+      width: 60px;
+      padding-right: 10px;
+      .user-img {
+        width: 100%;
+        border-radius: 60px;
+      }
+    }
+
+    .description {
+      padding: 8px;
+      line-height: 20px;
+      width: calc(100% - 60px);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 13px;
+      color: #aaa;
+      .title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #333;
+        font-size: 15px;
+      }
+    }
+  }
+}

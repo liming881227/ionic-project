@@ -1,0 +1,72 @@
+<ion-view view-title="我" class="account">
+    <ion-content>
+        <div class="user-info">
+            <div class="img-out">
+                <img class="img" ng-src="{{'img/ben.png'}}" ng-click="showCurAccountUserFace()">
+            </div>
+            <p class="name" ng-bind="curAccount ? curAccount.userName : '点击登录'"></p>
+            <p class="title" ng-bind="'开发工程师'"></p>
+        </div>
+
+        <ion-list class="block-list">
+            <ion-item class="item" ng-click="showCurAccountVantage()">
+                 <span class="float-left">
+                    <i class="icon icon-title ee-m-icon-integral color-orange"></i>
+                    累计收益
+                </span>
+                <span class="float-right">
+                    <span class="active-color" style="margin-right: 20px;">{{curAccount.userValue}}</span>
+                     <i class="float-right ion-ios-arrow-right"></i>
+                </span>
+            </ion-item>
+        </ion-list>
+
+        <ion-list class="block-list">
+            <ion-item class="item" ng-click="queryVideo(true)">
+                <span class="float-left">
+                    <i class="icon icon-title ion-android-upload color-blue"></i>
+                    我上传的视频
+                </span>
+                <i class="float-right ion-ios-arrow-right"></i>
+            </ion-item>
+            <ion-item class="item" ng-click="queryVideo()">
+                <span class="float-left">
+                    <i class="icon icon-title ion-android-share-alt color-green"></i>
+                    我分享的视频
+                </span>
+                <i class="float-right ion-ios-arrow-right"></i>
+            </ion-item>
+        </ion-list>
+
+        <ion-list class="block-list">
+            <ion-item class="item" ng-click="modifyCurAccountPassword()">
+                <span class="float-left">
+                    <i class="icon icon-title ee-m-icon-portrait color-blue"></i>
+                    修改头像
+                </span>
+                <i class="float-right ion-ios-arrow-right"></i>
+            </ion-item>
+
+            <ion-item class="item" ng-click="modifyCurAccountPassword()">
+                <span class="float-left">
+                    <i class="icon icon-title ee-m-icon-password-solid color-orange"></i>
+                    修改密码
+                </span>
+                <i class="float-right ion-ios-arrow-right"></i>
+            </ion-item>
+
+            <ion-item class="item" ng-click="modifyCurAccountPassword()">
+                <span class="float-left">
+                    <i class="icon icon-title ion-gear-a color-blue"></i>
+                    检测升级
+                </span>
+                <i class="float-right ion-ios-arrow-right"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <ion-footer-bar align-title="center" class="bar-light" ng-if="$root.curAccount.isLogged">
+        <div class="row responsive-sm">
+            <a class="button button-positive col" ng-click="signOut()">  退出 </a>
+        </div>
+    </ion-footer-bar>
+</ion-view>

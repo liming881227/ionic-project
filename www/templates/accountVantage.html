@@ -1,0 +1,18 @@
+<div class="modal account">
+    <ion-header-bar>
+        <button class="button button-clear pull-right ion-ios-close-outline" ng-click="closeModal()"></button>
+        <h1 class="title">取出</h1>
+    </ion-header-bar>
+    <ion-content class="has-header user">
+        <div class="user-info vantage-info">
+            <div class="img-out">
+                <img class="img" ng-src="img/vantage.jpg">
+            </div>
+            <p class="vantage" >我的财富值</p>
+            <p class="vantage"><i class="ion-social-yen"></i> {{curAccount.userValue}}</p>
+        </div>
+        <div class="row responsive-sm">
+            <button class="button col vantage-button button-positive"> 取现 </button>
+        </div>
+    </ion-content>
+</div>

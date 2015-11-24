@@ -1,0 +1,29 @@
+
+@font-face {font-family: "ee-m-icon";
+  src: url('#{$eeicons-font-path}/iconfont.eot'); /* IE9*/
+  src: url('#{$eeicons-font-path}/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('#{$eeicons-font-path}/iconfont.woff') format('woff'), /* chrome、firefox */
+  url('#{$eeicons-font-path}/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('#{$eeicons-font-path}/iconfont.svg#ee-m-icon') format('svg'); /* iOS 4.1- */
+}
+
+.ee-m-icon {
+  font-family:"ee-m-icon" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 全局字体定义*/
+[class^="ee-m-icon-"],
+[class*=" ee-m-icon-"] {
+  font-family: "ee-m-icon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+}

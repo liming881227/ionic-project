@@ -1,0 +1,12 @@
+{
+  "name": "'havefun'",
+  "app_id": "31b0e8d5",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

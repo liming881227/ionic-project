@@ -1,0 +1,82 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="任务详情">
+    <ion-nav-bar class="bar-stable">
+        <ion-nav-buttons side="left">
+        <a class="button icon-left ion-chevron-left button-clear button-samll" href="#/tab/tasks"></a>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content class="task-detail">
+
+      <div class="list">
+          <div class="task-detail-div float-left col">
+              <div class="task-detail-brief-div float-left col">
+                    <div class="task-detail-titile row">
+                        <h4>{{task.title}}</h4>
+                    </div>
+                    <div class="task-detail-brief">
+                        <div class="task-detail-time col float-left">
+                            <div class="float-left">
+                                <span>发布日期:</span>
+                                <span>{{task.startTime}}</span>
+                            </div>
+                            <div class="float-right">
+                                <span>截止日期:</span>
+                                <span>{{task.endTime}}</span>
+                            </div>
+                        </div>
+                        <div class="task-detail-value col float-left">
+                            <div class="float-left">
+                                <span>预算:</span>
+                                <span>{{task.moneyAll}}</span>
+                            </div>
+                            <div class="float-right">
+                                <span>分成:</span>
+                                <span>{{task.sharedMoney}}</span>
+                            </div>
+                        </div>
+                        <div class="float-left col" ng-if="task.adoptMoney">
+                            <span>采纳:</span>
+                            <span>{{task.adoptMoney}}</span>
+                        </div>
+                    </div>
+              </div>
+              <div class="separator float-left" style="width: 100%"></div>
+              <div class="task-detail-content-div float-left col">
+                  <div class="task-detail-content">
+                      <span>任务描述:</span><br/>
+                      <span ng-bind-html="task.description"></span>
+                  </div>
+                  <div class="task-detail-video-div" ng-if="task.demoVideo.name">
+                      <video width="100%" class="video-js vjs-default-skin" height="264" video-poster="task.demoVideo.downloadUrl" preload="none" ng-attr-src="{{task.demoVideo.downLoadUrl | trustUrl}}" ng-attr-poster="{{task.demoVideo.thumbnailUrl}}"  webkit-playsinline  controls>
+                      </video>
+                      <div class="video-infor-div float-left">
+                          <div class="float-left" style="width: 33.33%"><span>{{video.watchNumber || 55}}次观看</span></div>
+                          <div class="float-left" style="width: 33.33%;text-align: right"><span>进度:{{(task.moneyAll-task.moneyAwarded)/task.moneyAll*100}}%</span></div>
+                          <div class="float-right" style="width: 33.33%;text-align: right"ng-click="shareVideo(task.demoVideo)"><i class="ion-android-share-alt"></i> <span>转发</span></div>
+                      </div>
+                  </div>
+                  <div class="task-detail-video-div float-left" ng-if="task.childVideo.length">
+                      <div class="padding-bottom">上传的视频：</div>
+                      <div ng-repeat="video in task.childVideo" class="float-left task-detail-video">
+                          <video width="100%" class="video-js vjs-default-skin" height="264" video-poster="video.downloadUrl" preload="none" ng-attr-src="{{video.downLoadUrl | trustUrl}}" ng-attr-poster="{{video.thumbnailUrl}}"  webkit-playsinline  controls>
+                          </video>
+                          <div class="video-infor-div float-left">
+                              <div class="float-left"><span>{{video.watchNumber || 55}}次观看</span></div>
+                              <!--<div ng-if="task.publisherVideo.length"><span>进度:{{task.spending/task.budget*100}}%</span></div>-->
+                              <div class="float-right" ng-click="shareVideo(video)"><i class="ion-android-share-alt"></i> <span>转发</span></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="row responsive-sm task-detail-upload-video" ng-if="!task.demoVideo.name">
+              <a class="button button-positive button-full col ion-ios-upload-outline" ng-click="uploadVideo()">上传视频</a>
+          </div>
+      </div>
+    </ion-content>
+</ion-view>
