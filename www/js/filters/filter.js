@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * @ngdoc function
  * @name cnodejs.filters:tabName
@@ -9,11 +7,11 @@
  */
 
 angular.module('havefun.filters')
-.filter('trustUrl', function($sce) {
+.filter('trustUrl',['$sce', function($sce) {
       return function(content) {
           return $sce.trustAsResourceUrl(content);
       };
-})
+}])
 
 .filter('statusFilter', function() {
     return function(status) {
@@ -27,6 +25,6 @@ angular.module('havefun.filters')
             case 2:
                 return '未通过';
                 break;
-        }
+        };
     };
 });

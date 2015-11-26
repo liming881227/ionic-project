@@ -1,4 +1,3 @@
-'use strict';
 /**
  * Created by liming on 2015-11-04
  * 模态框service
@@ -8,7 +7,9 @@
             })
  */
 angular.module('havefun.services')
-    .factory('modalService',function($ionicModal, $rootScope, $q, $injector, $controller){
+    .factory('modalService',
+    ['$ionicModal', '$rootScope', '$q', '$injector', '$controller',
+    function($ionicModal, $rootScope, $q, $injector, $controller){
         return {
             show: show,
             hide: hide
@@ -70,4 +71,4 @@ angular.module('havefun.services')
                 scope.modal.remove();
             }
         }
-    });
+    }]);

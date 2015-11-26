@@ -1,10 +1,11 @@
-'use strict';
 /**
  * Created by liming on 2015-11-04
  * 后台请求
  */
 angular.module('havefun.services')
-    .factory('queryService',function($q,$http,$log,$window,$ionicLoading,$ionicPopup,$cordovaCapture,$cordovaFileTransfer){
+    .factory('queryService',
+    ['$q','$http',
+    function($q,$http){
         var serverAddr = 'http://hm.sogouqa.com/api';
 //        var serverAddr = 'http://test.sogouqa.com/api';
         function _myHttpGet (url, callback) {
@@ -165,4 +166,4 @@ angular.module('havefun.services')
                 }
             }
         }
-    });
+    }]);

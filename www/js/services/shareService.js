@@ -1,10 +1,11 @@
-'use strict';
 /**
  * Created by liming on 2015-11-04
  * 分享相关
  */
 angular.module('havefun.services')
-    .factory('shareService',function($q,$http,$log,$ionicPopup,$window){
+    .factory('shareService',
+    ['$q','$http','$log',
+    function($q,$http,$log){
 //        var shareService = function() {};
 //        shareService.prototype.weixin.checkInstalled = function(callback) {
 //            Wechat.isInstalled(function (installed) {
@@ -85,8 +86,8 @@ angular.module('havefun.services')
                         }, function (reason) {
                             callback && callback(false,reason);
                         });
-                    })
+                    });
                 }
             }
         }
-    });
+    }]);

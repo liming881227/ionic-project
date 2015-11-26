@@ -1,5 +1,5 @@
 angular.module('havefun.controllers')
-.controller('accountController', function($scope,$ionicModal,queryService,modalService) {
+.controller('accountController', ['$scope','$ionicModal','queryService','modalService',function($scope,$ionicModal,queryService,modalService) {
         window.scope = $scope;
         queryService.account.getAccount(function(data){
             $scope.curAccount = data;
@@ -38,4 +38,4 @@ angular.module('havefun.controllers')
         $scope.showCurAccountVantage = function(){
             modalService.show('templates/accountVantage.html','accountController');
         }
-});
+}]);

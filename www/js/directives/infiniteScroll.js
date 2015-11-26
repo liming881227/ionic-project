@@ -1,6 +1,8 @@
 ﻿
 angular.module('havefun.directives').directive(
-    'infiniteScroll',function($rootScope, $window, $timeout) {
+    'infiniteScroll',
+    ['$rootScope', '$window', '$timeout',
+    function($rootScope, $window, $timeout) {
         return {
             link: function(scope, elem, attrs) {
                 console.log('infiniteScroll');
@@ -58,7 +60,6 @@ angular.module('havefun.directives').directive(
                 }), 0);
             }
         }
-    }
-
+    }]
 );
 
