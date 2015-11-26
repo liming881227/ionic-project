@@ -11,6 +11,11 @@ ionic run android //安卓应用
 微信插件安装:    
 cordova plugin add https://github.com/xu-li/cordova-plugin-wechat --variable wechatappid=wx259bf7170c4b9daa --save   
 
+##gulp 压缩angular注意事项
+明确申明依赖事项  
+angular.module('havefun.controllers').controller('accountController', ['$scope',function($scope) {  
+而不能用  
+angular.module('havefun.controllers').controller('accountController', function($scope) {  
 
 
 
