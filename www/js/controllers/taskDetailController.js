@@ -1,5 +1,7 @@
 angular.module('havefun.controllers')
-    .controller('taskDetailController', function($scope, $stateParams,$log,$cordovaFileTransfer,$ionicPopup,queryService,utilService,modalService) {
+    .controller('taskDetailController',
+    ['$scope', '$stateParams','$log','$cordovaFileTransfer','$ionicPopup','queryService','utilService','modalService',
+    function($scope, $stateParams,$log,$cordovaFileTransfer,$ionicPopup,queryService,utilService,modalService) {
         window.scope = $scope;
         $scope.taskId = $stateParams.taskId;
         queryService.task.getByTaskId($scope.taskId,function(err,data) {
@@ -53,4 +55,4 @@ angular.module('havefun.controllers')
                 console.log(result);
             });
         };
-    });
+    }]);

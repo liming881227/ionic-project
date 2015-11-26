@@ -10,11 +10,7 @@ angular.module('havefun', [
         'havefun.controllers',
         'havefun.services' ,
         'ngCordova',
-        'ngSanitize',
-        'com.2fdevs.videogular',
-        'com.2fdevs.videogular.plugins.controls',
-        'com.2fdevs.videogular.plugins.overlayplay',
-        'com.2fdevs.videogular.plugins.poster'
+        'ngSanitize'
     ])
 
     .constant("$ionicLoadingConfig",{   //载入指示器
@@ -22,7 +18,7 @@ angular.module('havefun', [
         duration: 600
     })
 
-    .run(function($ionicPlatform,$rootScope,$log,utilService,shareService) {
+    .run(['$ionicPlatform','$rootScope',function($ionicPlatform,$rootScope) {
         $ionicPlatform.ready(function() {
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
             // for form inputs)
@@ -38,13 +34,9 @@ angular.module('havefun', [
             ionic.Platform.isFullScreen = true;  //deal the situation of Scrolling does not work when the keyboard is visible
             if ('addEventListener' in document) {
                 document.addEventListener("deviceready", function() {
-//                    alert(FileTransfer);
-//                    cordova.plugin.pDialog.init({progressStyle : 'HORIZONTAL', title: '上传视频', message : '正在上传中...'});
-//                    cordova.plugin.pDialog.setProgress(50);
                 }, false);
             }
         });
-
 
         //切换动画
         var inited = false,
@@ -78,10 +70,9 @@ angular.module('havefun', [
         };
 
         $rootScope.$on('$stateChangeSuccess', init);
+    }])
 
-    })
-
-    .config(function($ionicConfigProvider,$sceDelegateProvider) {
+    .config(['$ionicConfigProvider','$sceDelegateProvider',function($ionicConfigProvider,$sceDelegateProvider) {
         $ionicConfigProvider.views.maxCache(5);
         // 设置tab切换栏位置
         $ionicConfigProvider.tabs.position("bottom");
@@ -94,9 +85,9 @@ angular.module('havefun', [
         $ionicConfigProvider.views.transition("none");
 
         $sceDelegateProvider.resourceUrlWhitelist(['self', new RegExp('^(http[s]?):\/\/(w{3}.)?w3school\.com/.+$')]);
-    })
+    }])
 
-    .config(function($stateProvider, $urlRouterProvider) {
+    .config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $urlRouterProvider) {
       // Ionic uses AngularUI Router which uses the concept of states
       // Learn more here: https://github.com/angular-ui/ui-router
       // Set up the various states which the app can be in.
@@ -160,7 +151,7 @@ angular.module('havefun', [
             templateUrl: 'templates/shareVideo.html',
                 controller: 'shareVideoController'
         })
-    });
+    }]);
 
     angular.module('havefun.services', []);
     angular.module('havefun.filters', []);

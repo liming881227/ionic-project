@@ -1,5 +1,7 @@
 angular.module('havefun.controllers')
-    .controller('dashController',function($sce,$scope,$ionicTabsDelegate,$ionicPopup,$timeout,$q,$ionicScrollDelegate,queryService,shareService,modalService) {
+    .controller('dashController',
+    ['$sce','$scope','$ionicTabsDelegate','$ionicPopup','$timeout','$q','$ionicScrollDelegate','queryService','shareService','modalService',
+    function($sce,$scope,$ionicTabsDelegate,$ionicPopup,$timeout,$q,$ionicScrollDelegate,queryService,shareService,modalService) {
         window.scope = $scope;
         $scope.types = [
             {typeId: 'YLK', typeName: '娱乐控'},
@@ -123,6 +125,6 @@ angular.module('havefun.controllers')
             $scope.start = 0;
             $scope.count = 10;
         };
-    });
+    }]);
 
 

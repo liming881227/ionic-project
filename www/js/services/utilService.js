@@ -4,10 +4,11 @@
 /**
  * Created by dushufang on 2015/9/16.
  */
-'use strict';
 angular.module('havefun.services')
 
-    .factory('utilService',function($ionicActionSheet,$cordovaCamera,$ionicLoading,$ionicPopup,$cordovaCapture,$cordovaFileTransfer,$q){
+    .factory('utilService',
+    ['$ionicActionSheet','$cordovaCamera','$ionicLoading','$ionicPopup','$cordovaCapture',
+    function($ionicActionSheet,$cordovaCamera,$ionicLoading,$ionicPopup,$cordovaCapture){
 
         var service = {
             //loading
@@ -81,7 +82,7 @@ angular.module('havefun.services')
                     callback({msg:'error'});
                 });
             }
-        }
+        };
 
         return service;
-    })
+    }]);
