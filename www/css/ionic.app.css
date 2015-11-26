@@ -9332,6 +9332,9 @@ a.button {
 .color-blue {
   color: #2A93FC; }
 
+.color-black {
+  color: black; }
+
 .account {
   text-align: center;
   background-color: #F3F3F3; }
